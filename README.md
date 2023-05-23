@@ -22,6 +22,9 @@ Segment Customer’s into multiple groups based on their claim history in order 
 • Supervised Learning
 • Visualization
 
+# Glossary of the Dataset
+Name & Description pol_number - policy number for the insurance policy pol_eff_dt - auto insurance policy effective date gender - gender of driver: F, M agecat - driver's age category: 1 (youngest), 2, 3, 4, 5, 6 date_of_birth - driver's date of birth credit_score - driver’s credit score area - driver's area of residence: A, B, C, D, E, F traffic_index - traffic index of driver’s area of residence veh_age - age of vehicle(categorical): 1 (youngest), 2, 3, 4 veh_body - vehicle body type veh_value - vehicle value, in $10,000s months_insured - number of months vehicle insurance is bought(integer) claim_office - office location of claim handling agent: A, B, C, D numclaims - number of claims(integer): 0 if no claim claimcst0 - claim amount: 0 if no claim annual_premium - total charged premium i.e. the cost of insurance
+
 # Data Preprocessing/Data Cleaning
 **1. Initial Inspection/Check:**
 Checked the Null value count in each column
@@ -77,7 +80,20 @@ Feature Scaling is a method used to normalize the range of independent variables
 
 In simpler words, we can say that the scaling is used for making data points generalized so that the distance between them will be lower.
 
-**6. Appling Machine Learning Models:** 
+**6. Appling Machine Learning Models:**
+
+# KNN Algorithm:
+• The KNN algorithm uses 'feature similarity' to predict the values of any new data points. This means that the new point is assigned a value based on how closely it resembles the points in the training set.
+
+# KNeighborsClassifier:
+To Predict Number of Claims per Customer:
+• KNeighborsClassifier implements classification based on voting by nearest k-neighbors of target point.
+• Using KNeighborsClassifier and then the argument inside determines how many nearest neighbors you want your datapoint to look at. There is no rule of thumb for how many neighbors you should look at.
+
+# KNeighborsRegressor:
+To Predict Cost of Claims per Customer:
+• In a regression task, which predicts continuous values (not labels), KNN takes the mean of the nearest k neighbors
+
 (a) 
 In order to predict the numclaims column values for each potential customer, at first I started finding the performance metric value (Precision score or f1 score) on the balanced train dataset with numcliams as a target variable.
 

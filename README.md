@@ -82,15 +82,15 @@ In simpler words, we can say that the scaling is used for making data points gen
 
 **6. Appling Machine Learning Models:**
 
-# KNN Algorithm:
+**KNN Algorithm:**
 • The KNN algorithm uses 'feature similarity' to predict the values of any new data points. This means that the new point is assigned a value based on how closely it resembles the points in the training set.
 
-# KNeighborsClassifier:
+**KNeighborsClassifier:**
 To Predict Number of Claims per Customer:
 • KNeighborsClassifier implements classification based on voting by nearest k-neighbors of target point.
 • Using KNeighborsClassifier and then the argument inside determines how many nearest neighbors you want your datapoint to look at. There is no rule of thumb for how many neighbors you should look at.
 
-# KNeighborsRegressor:
+**KNeighborsRegressor:**
 To Predict Cost of Claims per Customer:
 • In a regression task, which predicts continuous values (not labels), KNN takes the mean of the nearest k neighbors
 
